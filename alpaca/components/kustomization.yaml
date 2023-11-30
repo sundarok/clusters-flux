@@ -4,11 +4,15 @@ resources:
 - ../../cluster-components-flux
 - ../../cluster-components-flux/optional/charlie.yaml
 
-labels:
-  - pairs:
-      gwcp.guidewire.com/dept: '20'
-  - pairs:
-      atmos-cluster: alpaca
+#labels:
+#  - pairs:
+#      gwcp.guidewire.com/dept: '20'
+#  - pairs:
+#      atmos-cluster: alpaca
+
+commonLabels:
+  atmos-cluster: alpaca-app
+  gwcp.guidewire.com/code: '200'
 
 patches:
   - target:
