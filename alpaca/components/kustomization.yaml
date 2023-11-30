@@ -7,6 +7,7 @@ resources:
 labels:
   - pairs:
       gwcp.guidewire.com/dept: '20'
+  - pairs:
       atmos-cluster: alpaca
 
 patches:
@@ -16,30 +17,30 @@ patches:
     patch: |
       - op: replace
         path: /spec/values/replicaCount
-        value: 21
-      - op: replace
-        path: /metadata/labels/gwcp.guidewire.com~1dept
-        value: 22
-      - op: add
-        path: /spec/postRenderers/0/kustomize/patches/-
-        value:
-          patch: |-
-            - op: replace
-              path: /metadata/labels/gwcp.guidewire.com~1dept
-              value: '23'
-          target:
-            name: .*
-            kind: .*
-      - op: add
-        path: /spec/postRenderers/0/kustomize/patches/-
-        value:
-          patch: |-
-            - op: replace
-              path: /spec/template/metadata/labels/gwcp.guidewire.com~1dept
-              value: '24'
-          target:
-            name: .*
-            kind: Deployment
+        value: 2
+#      - op: replace
+#        path: /metadata/labels/gwcp.guidewire.com~1dept
+#        value: 22
+#      - op: add
+#        path: /spec/postRenderers/0/kustomize/patches/-
+#        value:
+#          patch: |-
+#            - op: replace
+#              path: /metadata/labels/gwcp.guidewire.com~1dept
+#              value: '23'
+#          target:
+#            name: .*
+#            kind: .*
+#      - op: add
+#        path: /spec/postRenderers/0/kustomize/patches/-
+#        value:
+#          patch: |-
+#            - op: replace
+#              path: /spec/template/metadata/labels/gwcp.guidewire.com~1dept
+#              value: '24'
+#          target:
+#            name: .*
+#            kind: Deployment
   - target:
       name: bravo
       kind: HelmRelease
