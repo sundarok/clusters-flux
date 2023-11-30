@@ -9,7 +9,7 @@ spec:
   ref:
     branch: main
     # tag: v0.2.0
-  url: https://github.com/merusso/cluster-components-flux-kustomize.git
+  url: https://github.com/sundarok/cluster-components-flux-kustomize.git
 ---
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
@@ -20,7 +20,7 @@ spec:
   interval: 1m
   ref:
     branch: main
-  url: https://github.com/merusso/clusters-flux.git
+  url: https://github.com/sundarok/clusters-flux.git
   include:
     - repository:
         name: cluster-components-flux
@@ -37,5 +37,5 @@ spec:
   sourceRef:
     kind: GitRepository
     name: components
-  dependsOn:
-    - name: flux-system
+#  dependsOn:
+#    - name: flux-system
