@@ -22,21 +22,21 @@ resources:
 #  - ../../cluster-components-flux/label-patch.yaml
 
 patches:
-  - patch: |
-      - op: add
-        path: /metadata/labels/myowner1
-        value: "my-pods1"
-    target:
-      kind: Deployment
-      name: .*
-
-  - patch: |
-      - op: replace
-        path: /metadata/labels/gwcp.guidewire.com~1dept
-        value: '2000'
-    target:
-      name: .*
-      kind: .*
+#  - patch: |
+#      - op: add
+#        path: /metadata/labels/myowner1
+#        value: "my-pods1"
+#    target:
+#      kind: Deployment
+#      name: .*
+#
+#  - patch: |
+#      - op: replace
+#        path: /metadata/labels/gwcp.guidewire.com~1dept
+#        value: '2000'
+#    target:
+#      name: .*
+#      kind: .*
 
   - target:
       name: alpha
