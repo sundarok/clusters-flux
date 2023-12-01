@@ -45,4 +45,4 @@ spec:
           path: /metadata/labels/myowner2
           value: "my-pods2"
       target:
-        kind: Deployment
+        kind: .*
