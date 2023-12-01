@@ -28,6 +28,16 @@ patches:
         value: "my-pods1"
     target:
       kind: Deployment
+      name: .*
+
+  - patch: |
+      - op: replace
+        path: /metadata/labels/gwcp.guidewire.com~1dept
+        value: '2000'
+    target:
+      name: .*
+      kind: .*
+
   - target:
       name: alpha
       kind: HelmRelease
