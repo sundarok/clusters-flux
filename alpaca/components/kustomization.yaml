@@ -18,6 +18,9 @@ resources:
 #  - pairs:
 #      atmos-cluster: alpaca
 
+transformers:
+  - ../../cluster-components-flux/label-patch.yaml
+
 patches:
   - target:
       name: alpha
