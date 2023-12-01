@@ -37,5 +37,5 @@ spec:
   sourceRef:
     kind: GitRepository
     name: components
-#  dependsOn:
-#    - name: flux-system
+  dependsOn:
+    - name: flux-system
