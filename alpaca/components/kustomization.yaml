@@ -22,6 +22,12 @@ resources:
 #  - ../../cluster-components-flux/label-patch.yaml
 
 patches:
+  - patch: |
+      - op: replace
+        path: /metadata/labels/myowner1
+        value: "my-pods1"
+    target:
+      kind: Deployment
   - target:
       name: alpha
       kind: HelmRelease
