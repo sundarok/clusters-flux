@@ -40,11 +40,9 @@ spec:
   dependsOn:
     - name: flux-system
   patches:
-    patch:
-      patches:
-        - patch: |
-            - op: add
-              path: /metadata/labels/myowner2
-              value: "my-pods2"
-          target:
-            kind: Deployment
+    - patch: |
+        - op: add
+          path: /metadata/labels/myowner2
+          value: "my-pods2"
+      target:
+        kind: Deployment
