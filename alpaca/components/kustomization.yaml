@@ -23,7 +23,7 @@ resources:
 
 patches:
   - patch: |
-      - op: replace
+      - op: add
         path: /metadata/labels/myowner1
         value: "my-pods1"
     target:
