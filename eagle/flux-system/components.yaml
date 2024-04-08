@@ -29,7 +29,7 @@ spec:
     departmentCode: 275
     alpha:
       values:
-        replicaCount: 1
+        replicaCount: 2
         version: 6.6.1
     bravo:
       values:
