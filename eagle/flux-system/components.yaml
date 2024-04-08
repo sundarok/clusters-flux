@@ -31,6 +31,10 @@ spec:
       values:
         replicaCount: 2
         version: 6.6.1
+        resources:
+          requests:
+            cpu: 1m
+            memory: 21Mi
     bravo:
       values:
         replicaCount: 2
