@@ -41,5 +41,8 @@ spec:
           operator:
             limits:
               cpu: 75m
+            requests:
+              cpu: 5m
+              memory: 100Mi
         operator:
           replicaCount: 3
