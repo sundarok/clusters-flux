@@ -32,7 +32,7 @@ spec:
         replicaCount: 1
     bravo:
       values:
-        replicaCount: 1
+        replicaCount: 2
     charlie:
       enabled: false
     keda:
@@ -43,6 +43,6 @@ spec:
               cpu: 75m
             requests:
               cpu: 5m
-              memory: 100Mi
+              memory: 10Mi
         operator:
           replicaCount: 3
