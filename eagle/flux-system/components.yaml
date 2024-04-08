@@ -30,6 +30,7 @@ spec:
     alpha:
       values:
         replicaCount: 1
+        version: 6.6.1
     bravo:
       values:
         replicaCount: 2
